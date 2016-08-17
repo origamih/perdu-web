@@ -1,0 +1,43 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   database: depot_development
+#   pool: 5
+#   username: huy
+#   password: 123qwe
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: perdu_development
+  pool: 5
+  username: huy
+  password: 123qwe
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: perdu_test
+  pool: 5
+  username: huy
+  password: 123qwe
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: perdu_production
+  pool: 5
+  username: huy
+  password: 123qwe
+
+cucumber:
+  <<: *test

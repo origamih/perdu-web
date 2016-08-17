@@ -1,0 +1,27 @@
+<div class="container container-block">
+  <div class="row">
+    <div class="col-lg-12 text-box">
+      <div class="heading-alfa-font">
+        <span>Others</span>
+      </div>
+      
+      <p>Some text here</p>
+      <!-- <div class="img-nested">
+        <%= image_tag "winerack.jpg" %>
+      </div> -->
+    </div>
+  </div>  
+</div>
+
+<div class="container container-block menu-item-container">
+  <div class="row text-box">
+    <div class="col-lg-12">
+      <% MenuCategory.where(category: 'other').each do |category| %>
+        <%= link_to category.title, {action: 'other', category: category.title}, method: :get, class: "btn btn-default", remote: true %>
+      <% end %>
+    </div>
+  </div>
+  <div id="otherMenuItem">
+    <%= render 'menu_item_list' %>
+  </div>
+</div>

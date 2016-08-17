@@ -1,0 +1,288 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require bxslider
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+@font-face {
+  font-family: "Alfa Slab One"; 
+  src:font-url('AlfaSlabOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  color: #888888;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../images/newbarkbg.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.701961), rgba(0, 0, 0, 0.701961)), image-url('newbarkbg.jpg');
+  vertical-align: top;
+}
+
+footer {
+  height: 230px !important;
+}
+
+.row {
+	// width: 100%;
+  margin: 0px;
+}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+.navbar-default {
+	border-radius: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background-color: #320101;
+  box-shadow: 0 2px 20px #000;
+  border: 0;
+  z-index: 2;
+  font-family: "Alfa Slab One", sans-serif;
+
+  .navbar-nav .active a {
+    background-color: #320101;
+		color: #888888;
+	}
+
+  .navbar-nav li a {
+    font-size: 14px;
+    color: #ffffff;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .navbar-brand a {
+    padding-left: 15px;
+    font-size: 1.3em;
+    color: #ffffff;
+    // -webkit-transition: color .5s;
+    // transition: color .5s;
+  }
+
+  .navbar-brand a:hover, .navbar-brand a:focus {
+    color: #888888;
+  }
+
+  .navbar-nav li a:hover, .navbar-nav li a:focus {
+    color: #888888;
+  }
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+  color: #888888;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: transparent;
+  color: #888888;
+}
+
+.dropdown-menu {
+  background-color: #320101;
+  border: 1px solid black;
+
+  li a {
+    background-color: #320101;
+  }
+
+  li a:hover, li a:focus {
+    background-color: #320101;
+    color: #888888;
+  }
+}
+
+/* ==========================================================================
+   Header - Footer
+   ========================================================================== */
+
+#header {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  color: #ffffff;
+  z-index: 1;
+
+  h1 {
+    text-align: center;
+    margin: 0px;
+
+    img {
+      width: 50%;
+    }
+
+    a {
+      box-sizing: border-box;
+      width: 370px;
+      padding: 28px 22px 22px;
+      background: #320101;
+      display: inline-block;
+      position: relative;
+      box-shadow: 0 10px 20px #000;
+    }
+
+    a:after {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: -31px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 31px 185px 0 185px;
+      border-color: #320101 transparent transparent transparent;
+    }
+
+  }
+}
+
+
+
+#footer {
+  padding: 20px 0 20px;
+  text-align: center;
+  background: image-url('wood_BG.jpg') repeat;
+  height: 100%;
+}
+
+
+/* ==========================================================================
+   Parallax Scolling - skrollr
+   ========================================================================== */
+
+
+.homeSlide {
+  opacity: 1;
+  height: 400px;
+}
+
+#slide-1 {
+  height: 275px;
+  .bcg {
+    background-image: image-url('slider1.jpg');
+  }
+}
+
+.bcg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.hsContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hsContent {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    right: 0;
+}
+
+
+/* ==========================================================================
+   Shared Elements
+   ========================================================================== */
+
+
+blockquote, q {
+  quotes: none;
+  width: 80%;
+  margin-left: 10%;
+  font-style: italic;
+}
+
+.mtop10 {
+  height: 30px;
+}
+
+.heading-padding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.heading-italic {
+  font: italic 400 54px/54px "Georgia", serif;
+  color: #ffffff;
+}
+
+.heading-normal {
+  font: 400 64px/64px "Georgia", serif;
+  color: #ffffff;
+}
+
+.heading-background {
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px 15px;
+}
+
+.heading-alfa-font {
+  font: 400 59px/59px "Alfa Slab One", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.text-box {
+  text-align: center;
+}
+
+.img-nested {
+  img {
+    border: 8px solid #2a2b2d;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+.container-block {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.btn-default {
+  font: italic 400 25px/33px "Georgia", serif !important;
+  color: #ffffff;
+  border: 2px solid #515151 !important;
+  display: inline-block;
+  text-align: center !important;
+  padding: 15px 40px 18px !important;
+  margin-top: 1em;
+  background-color: transparent;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}

@@ -1,0 +1,46 @@
+// Place all the styles related to the MenuItems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.menu-item {
+  height: 180px;
+  margin-top: -3px;
+  margin-bottom: 15px;
+  background-color: rgba(45, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 4px;
+
+  h4 {
+    margin-bottom: 5px;
+    font-size: 25px;
+    color: #fff;
+  }
+
+  p {
+    font-family: "Georgia", serif;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .price {
+    display: inline-block;
+    font: 400 18px/18px serif;
+    color: #ffffff;
+    margin-top: 21px;
+    margin-right: 10px;
+    float: left;
+  }
+}
+
+.menu-item-container {
+  padding-top: 0px !important;
+
+  form {
+    display: inline-block;
+  }
+
+  .btn {
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
