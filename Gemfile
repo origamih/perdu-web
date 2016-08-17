@@ -44,6 +44,8 @@ gem 'bxslider-rails', '~> 4.2', '>= 4.2.5.1'
 
 gem 'skrollr-rails'
 
+gem 'font-awesome-sass'
+
 gem 'rails_12factor'
 # gem 'jquery-turbolinks'
 
