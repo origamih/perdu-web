@@ -1,20 +1,51 @@
 <div class="container container-block">
   <div class="row">
     <div class="col-lg-12">
-      <div>
-        <span class="heading-alfa-font">To Book reservations</span>
-        <br>
-        <span class="heading-normal">Please call:  </span>
+      <span class="heading-alfa-font">Book a reservation</span>
+      <br>
+      <div id="reservation_form" class="col-lg-6">
+        <%= form_tag home_reserved_path do%>
+          <div class="form-group">
+            <%= label_tag 'Name:' %>
+            <%= text_field_tag :guest, nil, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= label_tag 'Phone Number:' %>
+            <%= telephone_field_tag :phone_number, nil, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= label_tag 'Number of People:' %>
+            <%= number_field_tag :number_of_people, 1, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= label_tag 'Arrival Time:' %>
+            <div class="input-group date">
+              <%= datetime_field_tag :arrival_datetime, nil, class: 'form-control' %>
+              <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= label_tag 'Note:' %>
+            <%= text_area_tag :note, nil, class: 'form-control' %>
+          </div>
+          <div class="row">
+            <%= submit_tag 'Reserve', class: 'btn btn-default' %>
+          </div>
+        <% end %>
+      </div>
+      <div id="reservation_info" class="col-lg-12">
+        <span class="heading-normal">Or call:  </span>
         <span class="heading-normal">
-          <a href="tel:4035259938">(403) 525-9938</a>
+          <a href="tel:4035259938">+84 977 295939</a>
         </span>
         <br>
         <p>(On a cell-phone, just click the number to call)</p>
         <br>
         <h1>Hours of Operation</h1>
-        Tuesday to Saturday: 5pm - 10pm<br>
-        Monday: 5pm - 9pm<br>
-        CLOSED Sunday and all Stat Holidays<br>
+        7pm - 1am<br>
+        CLOSED the first and the third Monday of the month<br>
       </div>
     </div>
   </div>

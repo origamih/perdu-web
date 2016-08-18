@@ -16,6 +16,8 @@
 //= require bootstrap-sprockets
 //= require bxslider
 //= require skrollr
+//= require moment
+//= require bootstrap-datetimepicker
 $(function(){
   skrollr.init({
     smoothScrolling: false,

@@ -58,6 +58,7 @@ RSpec.describe MenuItemsController, type: :controller do
 
   describe "GET #index" do
     it "assigns all menu_items as @menu_items" do
+      @request.env["devise.mapping"] = Devise.mappings[:admin]
       menu_item = MenuItem.create! valid_attributes
       get :index,  {}, session: valid_session
       expect(assigns(:menu_items)).to eq([menu_item])

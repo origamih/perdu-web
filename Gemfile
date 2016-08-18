@@ -46,7 +46,9 @@ gem 'skrollr-rails'
 
 gem 'font-awesome-sass'
 
-gem 'rails_12factor'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
+
 # gem 'jquery-turbolinks'
 
 group :development, :test do
@@ -67,3 +69,6 @@ group :development do
   gem 'spring'
 end
 
+group :development do 
+  gem 'rails_12factor'
+end

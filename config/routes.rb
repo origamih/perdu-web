@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   get 'location' => 'home#location'
   get 'reservations' => 'home#reservations'
   get 'events' => 'home#events'
-  # The priority is based upon order of creation: first created -> highest priority.
+  post 'reserved' => 'home#reserved', as: 'home_reserved'
+  get 'reserved' => 'home#reservations'
+    # The priority' is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
