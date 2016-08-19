@@ -19,13 +19,21 @@
 //= require moment
 //= require bootstrap-datetimepicker
 $(function(){
-  skrollr.init({
+  // initialize skrollr if the window width is large enough
+  if ($(window).width() > 767) {
+    skrollr.init({
     mobileCheck: function() {
-                //hack - forces mobile version to be off
-                return false;
-            },
-    smoothScrolling: false,
-    mobileDeceleration: 0.004,
+      return false;
+    },
+    smoothScrolling: true,
     forceHeight: false
+  });
+  }
+
+  // disable skrollr if the window is resized below 768px wide
+  $(window).on('resize', function () {
+    if ($(window).width() <= 767) {
+      skrollr.init().destroy(); // skrollr.init() returns the singleton created above
+    }
   });
 });
