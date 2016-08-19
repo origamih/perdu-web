@@ -20,6 +20,10 @@
 //= require bootstrap-datetimepicker
 $(function(){
   skrollr.init({
+    mobileCheck: function() {
+                //hack - forces mobile version to be off
+                return false;
+            },
     smoothScrolling: false,
     mobileDeceleration: 0.004,
     forceHeight: false
