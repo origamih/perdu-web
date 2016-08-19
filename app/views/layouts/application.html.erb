@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <style><%= yield :stylesheets %></style>
 </head>
 <body>
@@ -84,22 +85,28 @@
 	<%= yield %>
 
 </body>
-<footer class="row" id="footer">
-	<div class="address row">
-		<i class="fa fa-map-marker"></i>
-		<address>
-			<span class="our-address">
-				<address>
-					2nd Floor, 29 Ngo Gia Tu Street<br>
-					Da Nang, Viet Nam <br>
-				</address>
-			</span>
-			<span class="phone"><a href="tel:4035259938">(403) 525-9938</a></span><br>
-			<span class="our-address">Hours: 7pm-1am Mon - Sun, Closed on the first and third Monday of the month</span> 
-		</address>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<footer class="container" id="footer">
+	<div class="row">
+		<i class="fa fa-map-marker"></i><br>
+		<span class="our-address">
+				2nd Floor, 29 Ngo Gia Tu Street<br>
+				Da Nang, Viet Nam <br>
+		</span>
+		<span class="phone"><a href="tel:+84977295939">+84 977 295939</a></span><br>
+		<span class="our-address">Hours: 7pm-1am, Closed on the first and third Monday of the month</span> 
 	</div>
-	<div class="row copyright">
-    <p>© Copyright 2016 Perdu Cocktail-Bar. All goddamn rights reserved.</a></p>
+	<div class="row heading-padding">
+    <span>© Copyright 2016 Perdu Cocktail-Bar. All rights reserved.</span>
   </div>
 </footer>
 </html>
