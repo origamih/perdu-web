@@ -21,6 +21,6 @@ class HomeController < ApplicationController
     options[:people] = params[:number_of_people]
     options[:datetime] = params[:arrival_datetime]
     options[:note] = params[:note]
-    ReservationNotifier.send_email(options).deliver
+    ReservationNotifier.send_email(options).deliver_now
   end
 end

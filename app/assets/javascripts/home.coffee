@@ -2,11 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+# $ ->
+#   $(".bxslider").bxSlider
+#     mode: 'fade', 
+#     pager: false,
+#     auto: true
 $ ->
-  $(".bxslider").bxSlider
-    mode: 'fade', 
-    pager: false,
-    auto: true
+  $('.carousel').carousel
+    interval: 0
 
 $ ->
   $('#arrival_datetime').datetimepicker
