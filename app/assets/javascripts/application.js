@@ -25,7 +25,8 @@ $(function(){
     mobileCheck: function() {
       return false;
     },
-    smoothScrolling: true,
+    smoothScrolling: false,
+    mobileDeceleration: 0.004,
     forceHeight: false
   });
   }
