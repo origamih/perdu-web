@@ -10,18 +10,18 @@
         <%= image_tag "winerack.jpg" %>
       </div> -->
     </div>
-  </div>  
-</div>
-
-<div class="container container-block menu-item-container">
-  <div class="row text-box">
-    <div class="col-lg-12">
-      <% MenuCategory.where(category: 'cocktail').each do |category| %>
-        <%= link_to category.title, {action: 'cocktail', category: category.title}, method: :get, class: "btn btn-default", remote: true %>
-      <% end %>
-    </div>
   </div>
-  <div id="cocktailMenuItem">
-    <%= render 'menu_item_list' %>
+
+  <div class="menu-item-container">
+    <div class="row text-box">
+      <div class="col-lg-12">
+        <% MenuCategory.where(category: 'cocktail').each do |category| %>
+          <%= link_to category.title, {action: 'cocktail', category: category.title}, method: :get, class: "btn btn-default", remote: true %>
+        <% end %>
+      </div>
+    </div>
+    <div id="cocktailMenuItem">
+      <%= render 'menu_item_list' %>
+    </div>
   </div>
 </div>

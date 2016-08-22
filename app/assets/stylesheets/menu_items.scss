@@ -1,6 +1,8 @@
 // Place all the styles related to the MenuItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
 .menu-item {
   height: 180px;
   margin-top: -3px;
@@ -42,5 +44,24 @@
     margin-bottom: 20px;
     margin-right: 5px;
     margin-left: 5px;
+  }
+
+  .btn-menu-item {
+    @media (min-width: 645px) {
+      font: italic 400 25px/33px "Georgia", serif;
+      padding: 15px 40px 18px;
+    }
+    @media (max-width: 644px) {
+      font: italic 400 20px/33px "Georgia", serif;
+      padding: 10px 30px 12px;
+    }
+    @media (max-width: 370px) {
+      font: italic 400 18px/33px "Georgia", serif;
+      padding: 5px 20px 8px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      margin-right: 3px;
+      margin-left: 3px;
+    }
   }
 }
