@@ -7,15 +7,23 @@
 #     mode: 'fade', 
 #     pager: false,
 #     auto: true
-$ ->
-  $('.carousel').carousel
-    interval: 0
 
 $ ->
+  $('.carousel').carousel()
+
+  do setHeight = ->
+    wHeight = $(window).height()
+    console.log(wHeight)
+    navHeight = $('#navbar').height()
+    vHeight = wHeight - navHeight
+    console.log(vHeight)
+    $('.carousel-inner').height vHeight
+
   $('#arrival_datetime').datetimepicker
     sideBySide: true,
-    # minDate: $.now(),
     minDate: moment().hour(19).minutes(0),
     disabledTimeIntervals: [
           [moment().hour(0).minutes(0), moment().hour(18).minutes(59)]
        ]
+  # $(window).resize ->
+  #   setHeight()

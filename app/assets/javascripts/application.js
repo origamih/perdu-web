@@ -18,13 +18,12 @@
 //= require skrollr
 //= require moment
 //= require bootstrap-datetimepicker
+
+
 $(function(){
   // initialize skrollr if the window width is large enough
   if ($(window).width() > 767) {
     skrollr.init({
-    mobileCheck: function() {
-      return false;
-    },
     smoothScrolling: false,
     mobileDeceleration: 0.004,
     forceHeight: false
@@ -34,7 +33,7 @@ $(function(){
   // disable skrollr if the window is resized below 768px wide
   $(window).on('resize', function () {
     if ($(window).width() <= 767) {
-      skrollr.init().destroy(); // skrollr.init() returns the singleton created above
+      // skrollr.init().destroy(); // skrollr.init() returns the singleton created above
     }
   });
 });
